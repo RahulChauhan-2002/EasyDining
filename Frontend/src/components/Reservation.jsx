@@ -17,7 +17,7 @@ const Reservation = () => {
   const handleReservation = async (e) => {
     e.preventDefault();
     try {
-      const { data } =await axios.post("http://localhost:4000/send",{firstName,lastName,email,date,time,phone})
+      const { data } =await axios.post("https://easydining.onrender.com/send",{firstName,lastName,email,date,time,phone})
       toast.success(data.message);
       setFirstName("");
       setLastName("");
